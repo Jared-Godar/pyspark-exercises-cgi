@@ -11,9 +11,29 @@
   - Examples - Netflix, 
 - High level overview of capabilities
 
+- Unified
+
 ## Architecture
 
-- 
+- MLLib - machine learning
+- Streaming - real-time analytcs
+- SQL - interactive queries
+- GraphX - Graph database
+
+- R
+- Python
+- Scala - native language
+- Jave
+
+![Spark Ecosystem](ecosystem.png)
+
+- Parquet files
+  - Not human readable
+  - Partitions where data split and stored efficiently
+
+
+![Spark vs PANDAS](spark_pandas.png)
+
 
 ## DataFrames
 
