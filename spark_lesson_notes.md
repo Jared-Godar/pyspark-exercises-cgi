@@ -67,9 +67,33 @@
 
 - Wide vs narrow
 - Do partitions need to interact or can they be executed
+
+## WOrk in notebooks
+
+- `show()` by column
+- `.take()` by row
+- `.df.describe().show()` like PANDAS describe - but remember you have to show
 ## Optimizing Features
 
-- 
+### Broadcast Variables
+
+- Smaller dataset (< 10 MB) cached to each executor node
+- Read only
+- Lookup table, commonly referenced - cached TX-Texas, state abbreviation lookup without joining
+- Need to define on our own - stored on each executor. Redundant data, needs to be small, but won't have to talk to other executors to access data - avoids shuffeling, no re-reading anything outsied
+
+### Accumulators
+
+- Update variable inside driver node
+- Mutable
+- Like a counter or sum
+
+![Optimize](optimize.png)
+
+![Plans](physical_plans.png)
+
+
+
 
 ## Preparing for Spark Exam
 
